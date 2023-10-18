@@ -7,8 +7,8 @@ from django.views.generic.edit import CreateView
 
 class ContactView(ListView):
     model = Contact
-    template_name = '#'
-    context_object_name = 'contact_list.html'
+    template_name = 'contact_list.html'
+    context_object_name = 'contact'
     ordering = ['family_name']
 
 class ContactDetailView(DetailView):
