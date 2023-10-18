@@ -3,10 +3,10 @@ from django.db import models
 class Contact(models.Model):
     name = models.CharField(max_length = 50)
     family_name = models.TextField(max_length = 50)
-    surname = models.TextField(max_length = 50)
+    surname = models.TextField(max_length = 50, blank=True)
     phone = models.IntegerField(max_length = 10)
     email = models.EmailField()
-    photo = models.ImageField()
+    photo = models.ImageField(blank=True)
     birth = models.DateField()
 
     def __str__ (self) -> str:
